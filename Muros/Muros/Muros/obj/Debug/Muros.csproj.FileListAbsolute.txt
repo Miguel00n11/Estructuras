@@ -1,0 +1,13 @@
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\obj\Debug\Muros.csproj.AssemblyReference.cache
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\obj\Debug\Muros.Form1.resources
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\obj\Debug\Muros.Properties.Resources.resources
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\obj\Debug\Muros.csproj.GenerateResource.cache
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\obj\Debug\Muros.csproj.CoreCompileInputs.cache
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\bin\Debug\Muros.exe.config
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\bin\Debug\Muros.exe
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\bin\Debug\Muros.pdb
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\bin\Debug\Ab3d.PowerToys.dll
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\bin\Debug\Ab3d.PowerToys.xml
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\obj\Debug\Muros.csproj.CopyComplete
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\obj\Debug\Muros.exe
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\obj\Debug\Muros.pdb

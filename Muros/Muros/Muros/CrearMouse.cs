@@ -25,23 +25,7 @@ using MessageBox = System.Windows.MessageBox;
 
 namespace Muros
 {
-    public partial class Form1 : Form
+    class CrearMouse
     {
-
-        private Viewport3D ventana3D;
-        private TargetPositionCamera _targetP;
-
-        public Form1()
-        {
-            InitializeComponent();
-
-            CrearVentana ventana = new CrearVentana();
-
-            ventana.CrearVentana3D(elementHost1, ventana3D, _targetP);
-
-
-
-
-        }
     }
 }

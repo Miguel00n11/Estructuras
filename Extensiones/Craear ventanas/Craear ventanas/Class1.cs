@@ -23,25 +23,9 @@ using Ab3d.Visuals;
 using Ab3d.Common.EventManager3D;
 using MessageBox = System.Windows.MessageBox;
 
-namespace Muros
+namespace Craear_ventanas
 {
-    public partial class Form1 : Form
+    public class Class1
     {
-
-        private Viewport3D ventana3D;
-        private TargetPositionCamera _targetP;
-
-        public Form1()
-        {
-            InitializeComponent();
-
-            CrearVentana ventana = new CrearVentana();
-
-            ventana.CrearVentana3D(elementHost1, ventana3D, _targetP);
-
-
-
-
-        }
     }
 }
