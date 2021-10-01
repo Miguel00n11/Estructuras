@@ -1,0 +1,9 @@
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Extensiones\Craear ventanas\Craear ventanas\bin\Debug\Craear ventanas.dll
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Extensiones\Craear ventanas\Craear ventanas\bin\Debug\Craear ventanas.pdb
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Extensiones\Craear ventanas\Craear ventanas\bin\Debug\Ab3d.PowerToys.dll
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Extensiones\Craear ventanas\Craear ventanas\bin\Debug\Ab3d.PowerToys.xml
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Extensiones\Craear ventanas\Craear ventanas\obj\Debug\Craear ventanas.csproj.AssemblyReference.cache
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Extensiones\Craear ventanas\Craear ventanas\obj\Debug\Craear ventanas.csproj.CoreCompileInputs.cache
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Extensiones\Craear ventanas\Craear ventanas\obj\Debug\Craear ventanas.csproj.CopyComplete
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Extensiones\Craear ventanas\Craear ventanas\obj\Debug\Craear ventanas.dll
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Extensiones\Craear ventanas\Craear ventanas\obj\Debug\Craear ventanas.pdb
