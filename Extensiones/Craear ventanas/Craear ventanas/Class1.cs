@@ -68,9 +68,9 @@ namespace Craear_ventanas
     {
 
         private MouseCameraController _mouseControl;
+        private Grid _rootGrid;
 
-
-        public void CrearMouse(Grid _rootGrid)
+        public void CrearMouse()
         {
             _mouseControl = new MouseCameraController()
             {
