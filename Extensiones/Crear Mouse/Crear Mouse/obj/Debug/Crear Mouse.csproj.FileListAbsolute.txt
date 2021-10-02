@@ -1,0 +1,9 @@
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Extensiones\Crear Mouse\Crear Mouse\bin\Debug\Crear Mouse.dll
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Extensiones\Crear Mouse\Crear Mouse\bin\Debug\Crear Mouse.pdb
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Extensiones\Crear Mouse\Crear Mouse\bin\Debug\Ab3d.PowerToys.dll
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Extensiones\Crear Mouse\Crear Mouse\bin\Debug\Ab3d.PowerToys.xml
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Extensiones\Crear Mouse\Crear Mouse\obj\Debug\Crear Mouse.csproj.AssemblyReference.cache
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Extensiones\Crear Mouse\Crear Mouse\obj\Debug\Crear Mouse.csproj.CoreCompileInputs.cache
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Extensiones\Crear Mouse\Crear Mouse\obj\Debug\Crear Mouse.csproj.CopyComplete
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Extensiones\Crear Mouse\Crear Mouse\obj\Debug\Crear Mouse.dll
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Extensiones\Crear Mouse\Crear Mouse\obj\Debug\Crear Mouse.pdb
