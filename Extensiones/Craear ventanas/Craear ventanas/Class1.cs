@@ -72,6 +72,7 @@ namespace Craear_ventanas
 
         public void CrearMouse()
         {
+            _rootGrid = new Grid()
             _mouseControl = new MouseCameraController()
             {
                 RotateCameraConditions = MouseCameraController.MouseAndKeyboardConditions.RightMouseButtonPressed,

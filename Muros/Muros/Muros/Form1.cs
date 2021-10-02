@@ -31,16 +31,22 @@ namespace Muros
 
         private Viewport3D ventana3D;
         private TargetPositionCamera _targetP;
+        //private CrearMouse _mouse;
+
 
         public Form1()
         {
             InitializeComponent();
 
             CrearVentanas3D ventana = new CrearVentanas3D();
+            CreaMouse _mouse = new CreaMouse();
 
             ventana.CrearVentana3D(elementHost1, ventana3D, _targetP);
 
+            _mouse.CrearMouse();
 
+
+            
 
 
         }
