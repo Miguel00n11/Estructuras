@@ -60,7 +60,7 @@ namespace Craear_ventanas
 
 
         }
-        public class CrearMouse
+        public class CreaMouse
         {
 
             private MouseCameraController _mouseControl;
