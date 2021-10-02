@@ -60,33 +60,34 @@ namespace Craear_ventanas
 
 
         }
-        public class CreaMouse
+        
+
+
+    }
+    public class CreaMouse
+    {
+
+        private MouseCameraController _mouseControl;
+
+
+        public void CrearMouse(Grid _rootGrid)
         {
-
-            private MouseCameraController _mouseControl;
-
-
-            public void CrearMouse(Grid _rootGrid)
+            _mouseControl = new MouseCameraController()
             {
-                _mouseControl = new MouseCameraController()
-                {
-                    RotateCameraConditions = MouseCameraController.MouseAndKeyboardConditions.RightMouseButtonPressed,
-                    MoveCameraConditions = MouseCameraController.MouseAndKeyboardConditions.RightMouseButtonPressed | MouseCameraController.MouseAndKeyboardConditions.ControlKey,
-                    EventsSourceElement = _rootGrid,
-                    //TargetCamera = _targetP
+                RotateCameraConditions = MouseCameraController.MouseAndKeyboardConditions.RightMouseButtonPressed,
+                MoveCameraConditions = MouseCameraController.MouseAndKeyboardConditions.RightMouseButtonPressed | MouseCameraController.MouseAndKeyboardConditions.ControlKey,
+                EventsSourceElement = _rootGrid,
+                //TargetCamera = _targetP
 
 
-                };
-                _rootGrid.Children.Add(_mouseControl);
+            };
+            _rootGrid.Children.Add(_mouseControl);
 
-
-
-            }
 
 
         }
 
 
-
     }
+
 }
