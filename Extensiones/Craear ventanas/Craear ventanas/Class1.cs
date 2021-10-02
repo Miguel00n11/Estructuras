@@ -28,7 +28,10 @@ namespace Craear_ventanas
     public class CrearVentanas3D
     {
 
-        private Grid _rootGrid;
+        private Grid _rootGrid; 
+        private MouseCameraController _mouseControl;
+        public WireGridVisual3D crearGrid;
+
 
         public void CrearVentana3D(ElementHost elementHost1, Viewport3D ventana3D, TargetPositionCamera _targetP)
         {
@@ -55,24 +58,7 @@ namespace Craear_ventanas
             _rootGrid.Children.Add(_targetP);
 
 
-
-
-
-
-        }
-        
-
-
-    }
-    public class CreaMouse
-    {
-
-        private MouseCameraController _mouseControl;
-        private Grid _rootGrid;
-
-        public void CrearMouse()
-        {
-            _rootGrid = new Grid();
+            //_rootGrid = new Grid();
             _mouseControl = new MouseCameraController()
             {
                 RotateCameraConditions = MouseCameraController.MouseAndKeyboardConditions.RightMouseButtonPressed,
@@ -84,9 +70,21 @@ namespace Craear_ventanas
             };
             _rootGrid.Children.Add(_mouseControl);
 
+            crearGrid = new WireGridVisual3D()
+            {
+                CenterPosition = new Point3D(0, 0, 0),
+                Size = new Size(5000, 5000),
+                HeightCellsCount = 20,
+                WidthCellsCount = 20,
+                LineThickness = 1
+
+
+            };
+            ventana3D.Children.Add(crearGrid);
 
 
         }
+
 
 
     }

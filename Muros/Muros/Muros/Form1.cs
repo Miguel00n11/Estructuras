@@ -21,6 +21,7 @@ using Ab3d.Cameras;
 using Ab3d.Common.Cameras;
 using Ab3d.Controls;
 using Ab3d.Visuals;
+using Ab3d.Utilities;
 using Ab3d.Common.EventManager3D;
 using MessageBox = System.Windows.MessageBox;
 
@@ -31,7 +32,8 @@ namespace Muros
 
         private Viewport3D ventana3D;
         private TargetPositionCamera _targetP;
-        //private CrearMouse _mouse;
+        private EventManager3D _eventManager3D;
+        public WireGridVisual3D crearGrid = new WireGridVisual3D();
 
 
         public Form1()
@@ -39,14 +41,31 @@ namespace Muros
             InitializeComponent();
 
             CrearVentanas3D ventana = new CrearVentanas3D();
-            CreaMouse _mouse = new CreaMouse();
+            //CreaMouse _mouse = new CreaMouse();
 
             ventana.CrearVentana3D(elementHost1, ventana3D, _targetP);
 
-            _mouse.CrearMouse();
+
+            //_mouse.CrearMouse();
+
+            _eventManager3D = new Ab3d.Utilities.EventManager3D(ventana3D);
 
 
-            
+            // Add a wire grid
+
+
+            //crearGrid = new WireGridVisual3D()
+            //{
+            //    CenterPosition = new Point3D(0, 0, 0),
+            //    Size = new Size(5000, 5000),
+            //    HeightCellsCount = 20,
+            //    WidthCellsCount = 20,
+            //    LineThickness = 1
+
+
+            //};
+            //ventana3D.Children.Add(crearGrid);
+
 
 
         }
