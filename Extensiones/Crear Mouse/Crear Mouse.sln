@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crear Mouse", "Crear Mouse\Crear Mouse.csproj", "{C24CE4A0-AA33-4DD8-A795-2F036BD8D35A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C24CE4A0-AA33-4DD8-A795-2F036BD8D35A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C24CE4A0-AA33-4DD8-A795-2F036BD8D35A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C24CE4A0-AA33-4DD8-A795-2F036BD8D35A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C24CE4A0-AA33-4DD8-A795-2F036BD8D35A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34E97112-F6A2-4D97-889C-1451784B320C}
+	EndGlobalSection
+EndGlobal

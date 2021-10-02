@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows;
 using System.Windows.Forms.Integration;
+using Craear_ventanas;
 
 using Ab3d;
 using Ab3d.Cameras;
@@ -35,7 +36,7 @@ namespace Muros
         {
             InitializeComponent();
 
-            CrearVentana ventana = new CrearVentana();
+            CrearVentanas3D ventana = new CrearVentanas3D();
 
             ventana.CrearVentana3D(elementHost1, ventana3D, _targetP);
 

@@ -11,3 +11,5 @@ C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\bin\Debug\A
 C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\obj\Debug\Muros.csproj.CopyComplete
 C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\obj\Debug\Muros.exe
 C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\obj\Debug\Muros.pdb
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\bin\Debug\Craear ventanas.dll
+C:\Users\Jesus Miguel\Documents\GitHub\Estructuras\Muros\Muros\Muros\bin\Debug\Craear ventanas.pdb
