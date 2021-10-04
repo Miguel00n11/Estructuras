@@ -44,7 +44,7 @@ namespace Muros
             //CreaMouse _mouse = new CreaMouse();
 
             ventana.CrearVentana3D(elementHost1, ventana3D, _targetP);
-            // hola anbbb11 1 1 1 1  1
+            // hola anbbb11 1 2
 
             //_mouse.CrearMouse();
 
