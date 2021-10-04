@@ -42,7 +42,7 @@ namespace Muros
 
             ventana = new CrearVentanas3D();
             ventana.CrearVentana3D(elementHost1, ventana3D, _targetP);
-            // hola anbbb11 1 27
+            // hola anbbb11 1 27 2
 
             //_targetP.TargetPosition = new Point3D(1, 1, 1);
             //_targetP.Distance = 1;
