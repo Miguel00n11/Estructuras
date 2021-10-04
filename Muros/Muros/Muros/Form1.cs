@@ -30,44 +30,37 @@ namespace Muros
     public partial class Form1 : Form
     {
 
-        private Viewport3D ventana3D;
-        private TargetPositionCamera _targetP;
-        private EventManager3D _eventManager3D;
+        public Viewport3D ventana3D;
+        public TargetPositionCamera _targetP=new TargetPositionCamera();
+        public EventManager3D _eventManager3D;
         public WireGridVisual3D crearGrid = new WireGridVisual3D();
-
+        public CrearVentanas3D ventana;
 
         public Form1()
         {
             InitializeComponent();
 
-            CrearVentanas3D ventana = new CrearVentanas3D();
-            //CreaMouse _mouse = new CreaMouse();
-
+            ventana = new CrearVentanas3D();
             ventana.CrearVentana3D(elementHost1, ventana3D, _targetP);
 
+            ventana.distt = 1200;
+            //ventana.altt = 1200;
+            ventana.att = 20;
 
-            //_mouse.CrearMouse();
+            //_targetP.TargetPosition = new Point3D(1, 1, 1);
+            //_targetP.Distance = 1;
+            //_targetP.Heading = 11111;
+            //_targetP.Attitude = -1;
 
             _eventManager3D = new Ab3d.Utilities.EventManager3D(ventana3D);
 
 
-            // Add a wire grid
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
 
-            //crearGrid = new WireGridVisual3D()
-            //{
-            //    CenterPosition = new Point3D(0, 0, 0),
-            //    Size = new Size(5000, 5000),
-            //    HeightCellsCount = 20,
-            //    WidthCellsCount = 20,
-            //    LineThickness = 1
-
-
-            //};
-            //ventana3D.Children.Add(crearGrid);
-
-
-
+           
         }
     }
 }

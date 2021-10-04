@@ -28,9 +28,12 @@ namespace Craear_ventanas
     public class CrearVentanas3D
     {
 
-        private Grid _rootGrid; 
-        private MouseCameraController _mouseControl;
+        public Grid _rootGrid;
+        public MouseCameraController _mouseControl;
         public WireGridVisual3D crearGrid;
+        public double distt;
+        public double altt;
+        public double att;
 
 
         public void CrearVentana3D(ElementHost elementHost1, Viewport3D ventana3D, TargetPositionCamera _targetP)
@@ -46,10 +49,10 @@ namespace Craear_ventanas
 
             _targetP = new TargetPositionCamera()
             {
-                TargetPosition = new Point3D(0, -1.5, 0),
-                Distance = 20,
-                Heading = 30,
-                Attitude = -20,
+                //TargetPosition = new Point3D(0, 20, 0),
+                Distance = 120,
+                Heading = 1200,
+                Attitude = -att,
                 ShowCameraLight = ShowCameraLightType.Always,
 
 
