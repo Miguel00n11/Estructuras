@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 //using System.Drawing;
-using System.Windows.Media;
-using System.Windows.Media.Media3D;
-using System.Windows.Controls;
-using System.Windows.Forms;
-
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Windows;
-using System.Windows.Forms.Integration;
+using System.Windows.Controls;
+using System.Windows.Forms;
+//using DevExpress.XtraEditors;
 
-using Ab3d;
+using System.Windows.Media.Media3D;
 using Ab3d.Cameras;
 using Ab3d.Common.Cameras;
-using Ab3d.Controls;
-using Ab3d.Visuals;
 using Ab3d.Common.EventManager3D;
-using MessageBox = System.Windows.MessageBox;
+using Ab3d.Controls;
+using Ab3d.Utilities;
+using HorizontalAlignment = System.Windows.HorizontalAlignment;
+using MouseEventArgs = System.Windows.Forms.MouseEventArgs;
 
+using Ab3d;
+using Ab3d.Visuals;
+using System.Windows.Media;
+using MessageBox = System.Windows.Forms.MessageBox;
 namespace Craear_ventanas
 {
     public class CrearVentanas3D
@@ -36,55 +36,114 @@ namespace Craear_ventanas
         public double att;
 
 
-        public void CrearVentana3D(ElementHost elementHost1, Viewport3D ventana3D, TargetPositionCamera _targetP)
+        public void CrearVentana3D( Grid _rootGrid, 
+                                    Viewport3D _viewport3D, 
+                                    TargetPositionCamera _targetPositionCamera, 
+                                    MouseCameraController _mouseCameraController, 
+                                    ViewCubeCameraController vistaCubo,
+                                    EventManager3D _eventManager3D,
+                                     WireGridVisual3D wireGridVisual3D)
         {
-            _rootGrid = new Grid()
-            {
-                Background = Brushes.LightGray
-            };
-            elementHost1.Child = _rootGrid;
+            _rootGrid.Background = Brushes.DarkGray;
+            //_viewport3D.Name = Nombre;
 
-            ventana3D = new Viewport3D();
-            _rootGrid.Children.Add(ventana3D);
 
-            _targetP = new TargetPositionCamera()
+            _rootGrid.Children.Add(_viewport3D);
+
+            _targetPositionCamera = new Ab3d.Cameras.TargetPositionCamera()
             {
-                //TargetPosition = new Point3D(0, 20, 0),
-                Distance = 120,
-                Heading = 1200,
-                Attitude = -att,
+                TargetPosition = new Point3D(0, -1.5, 0),
+                Distance = 20,
+                Heading = 30,
+                Attitude = -20,
                 ShowCameraLight = ShowCameraLightType.Always,
-
-
+                TargetViewport3D = _viewport3D
             };
-            _targetP.RotateCamera(45, 0);
-            _rootGrid.Children.Add(_targetP);
 
+            _rootGrid.Children.Add(_targetPositionCamera);
 
-            //_rootGrid = new Grid();
-            _mouseControl = new MouseCameraController()
+            _mouseCameraController = new Ab3d.Controls.MouseCameraController()
             {
-                RotateCameraConditions = MouseCameraController.MouseAndKeyboardConditions.RightMouseButtonPressed,
-                MoveCameraConditions = MouseCameraController.MouseAndKeyboardConditions.RightMouseButtonPressed | MouseCameraController.MouseAndKeyboardConditions.ControlKey,
-                EventsSourceElement = _rootGrid,
-                //TargetCamera = _targetP
-
-
+                RotateCameraConditions = MouseCameraController.MouseAndKeyboardConditions.LeftMouseButtonPressed,
+                MoveCameraConditions = MouseCameraController.MouseAndKeyboardConditions.RightMouseButtonPressed,
+                //MoveCameraConditions = MouseCameraController.MouseAndKeyboardConditions.RightMouseButtonPressed | MouseCameraController.MouseAndKeyboardConditions.ControlKey,
+                EventsSourceElement = _rootGrid
+                //TargetCamera = _targetPositionCamera
             };
-            _rootGrid.Children.Add(_mouseControl);
 
-            crearGrid = new WireGridVisual3D()
+            _rootGrid.Children.Add(_mouseCameraController);
+
+            var cameraControlPanel = new Ab3d.Controls.CameraControlPanel()
             {
-                CenterPosition = new Point3D(0, 0, 0),
-                Size = new Size(5000, 5000),
-                HeightCellsCount = 20,
-                WidthCellsCount = 20,
-                LineThickness = 1
+                VerticalAlignment = VerticalAlignment.Bottom,
+                HorizontalAlignment = HorizontalAlignment.Right,
+                Margin = new Thickness(5, 5, 5, 5),
+                Width = 225,
+                Height = 75,
+                ShowMoveButtons = false
+                // TargetCamera = _targetPositionCamera
+            };
+
+            _rootGrid.Children.Add(cameraControlPanel);
+
+            var ejes = new Ab3d.Controls.CameraAxisPanel()
+            {
+                VerticalAlignment = VerticalAlignment.Bottom,
+                HorizontalAlignment = HorizontalAlignment.Left,
+                Margin = new Thickness(5, 5, 5, 5),
+                Width = 100,
+                Height = 75
+                //TargetCamera = _targetPositionCamera
+            };
+
+            _rootGrid.Children.Add(ejes);
+
+            StackPanel panel = new StackPanel()
+            {
+                HorizontalAlignment = HorizontalAlignment.Right,
+                VerticalAlignment = VerticalAlignment.Top
 
 
             };
-            ventana3D.Children.Add(crearGrid);
+            _rootGrid.Children.Add(panel);
 
+            vistaCubo = new Ab3d.Controls.ViewCubeCameraController()
+            {
+                Width = 200,
+                Height = 200,
+
+                DefaultCubePlaneTexts = new string[] { "Derecha", "Izquierda", "Arriba", "Abajo", "Atras", "Frente" }
+
+            };
+            Color Pincel;
+            Pincel = Color.FromArgb(255, 255, 0, 0);
+            Color PincelVerde = Colors.LightGray;
+            vistaCubo.Foreground = new SolidColorBrush(PincelVerde);
+
+            vistaCubo.TargetCamera = _targetPositionCamera;
+
+            panel.Children.Add(vistaCubo);
+
+            // The event manager will be used to manage the mouse events on our boxes
+            _eventManager3D = new Ab3d.Utilities.EventManager3D(_viewport3D);
+
+
+            // Add a wire grid
+
+
+            wireGridVisual3D.Size = new Size(15, 15);
+            wireGridVisual3D.HeightCellsCount = 20;
+            wireGridVisual3D.WidthCellsCount = 20;
+            wireGridVisual3D.IsClosed = true;
+            wireGridVisual3D.LineThickness = 1;
+            wireGridVisual3D.LineColor = Colors.Gray;
+
+
+
+            _viewport3D.Children.Add(wireGridVisual3D);
+
+
+            // ToggleCameraAnimation(); // Start camer animation
 
         }
 
